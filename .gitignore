@@ -1,0 +1,15 @@
+# IntelliJ IDEA
+.idea/
+.idea/*.xml
+.idea/*xml/
+.idea/.idea/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/gradle.xml
+.idea/encoding.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+*.iml
+*.iws
+*.ipr
