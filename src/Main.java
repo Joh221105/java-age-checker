@@ -10,15 +10,7 @@ public class Main {
         try{
             int birthYear = scanner.nextInt();
             int age = calculateAge(birthYear);
-            if (age > 125){
-                System.out.print("Are you sure you typed in your year of birth correctly?");
-            }
-            else if (age < 0){
-                System.out.print("Please enter a valid age");
-            }
-            else{
-                System.out.print("I have calculated your age to be: " + age + " or " + (age-1));
-            }
+            displayResult(age);
         }
         catch(InputMismatchException e){
             System.out.print("Please enter a number for your age");
@@ -29,5 +21,17 @@ public class Main {
     public static int calculateAge(int birthYear){
         int year = Year.now().getValue();
         return year - birthYear;
+    }
+
+    public static void displayResult(int age){
+        if (age > 125){
+            System.out.print("Are you sure you typed in your year of birth correctly?");
+        }
+        else if (age < 0){
+            System.out.print("Please enter a valid age");
+        }
+        else{
+            System.out.print("I have calculated your age to be: " + age + " or " + (age-1));
+        }
     }
 }
