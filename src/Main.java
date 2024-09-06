@@ -9,7 +9,11 @@ public class Main {
         int birthYear = scanner.nextInt();
         int year = Year.now().getValue();
         int age = year - birthYear;
-        System.out.print("I have calculated your age to be: " + age + " or " + (age-1));
-
+        if (age > 125){
+            System.out.print("Aer you sure you typed in your year of birth correctly?");
+        }
+        else{
+            System.out.print("I have calculated your age to be: " + age + " or " + (age-1));
+        }
     }
 }
