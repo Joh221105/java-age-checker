@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean birthdayPassed = true;
 
         while (true) {
             System.out.println("Hi, what year were you born in? (or type 'exit' to quit): ");
@@ -19,6 +18,8 @@ public class Main {
 
                 int birthYear = scanner.nextInt();
                 int age = calculateAge(birthYear);
+                System.out.println("Your birthday has already passed. (true/false): ");
+                boolean birthdayPassed = scanner.nextBoolean();
                 displayResult(age, birthdayPassed);
 
             } catch (InputMismatchException e) {
@@ -41,10 +42,10 @@ public class Main {
             System.out.println("Please enter a valid age.");
         } else {
             if (birthdayPassed){
-                System.out.println("I have calculated your age to be: " + age + " or " + (age - 1));
+                System.out.println("I have calculated your age to be: " + age + " years old!");
             }
             else{
-                System.out.println("I have calculated your age to be: " + age + " or " + (age - 1));
+                System.out.println("I have calculated your age to be: " + (age - 1) + " years old!");
             }
         }
     }
