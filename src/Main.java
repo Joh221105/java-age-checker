@@ -7,13 +7,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean continueRunning = true;
 
-        while (continueRunning) {
+        while (true) {
             System.out.println("Hi, what year were you born in? (or type 'exit' to quit): ");
             try {
                 if (scanner.hasNext("exit")) {
-                    continueRunning = false;
+                    System.out.println("Goodbye!");
                     break;
                 }
 
